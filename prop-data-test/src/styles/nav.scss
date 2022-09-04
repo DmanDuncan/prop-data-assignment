@@ -1,0 +1,127 @@
+@import 'global.scss';
+
+.nav-container {
+    background-color: $color-primary;
+    color: $color-white;
+
+    .nav-content {
+        display: flex;
+        padding: 30px 50px;
+
+        .logo-container {
+            width: 50%;
+            display: flex;
+        }
+        
+        .nav-links-container-desktop {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 50%;
+
+            .nav-links-desktop {
+                display: flex;
+                gap: 30px;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                .nav-link {
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    transition: all 0.5s;
+
+                    &:hover {
+                        color: $color-pink;
+                    }
+                }
+            }
+        }
+
+        .nav-links-container-mobile {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-container {
+    
+        .nav-content {
+            padding: 20px 30px;
+
+            .logo-container {
+                width: 40%;
+            }
+
+            .nav-links-container-desktop {
+                width: 60%;
+
+                .nav-links-desktop {
+                    flex-wrap: wrap;
+                    gap: 5px 10px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .nav-container {
+    
+        .nav-content {
+            padding: 20px 30px;
+
+            .logo-container {
+                width: 60%;
+                
+                img {
+                    width: 200px;
+                }
+            }
+
+            .nav-links-container-desktop {
+                display: none;
+            }
+    
+            .nav-links-container-mobile {
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+                width: 40%;
+                
+                img {
+                    width: 45px;
+                    height: 45px;
+                }
+                
+                .nav-links-mobile {
+                    position: absolute;
+                    top: 45px;
+                    max-height: 0;
+                    overflow: hidden;
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    background-color: $color-pink;
+                    border-radius: 2px;
+                    transition: all 0.3s;
+
+                    .nav-link-mobile {
+                        width: 180px;
+                        padding: 5px;
+                        text-transform: uppercase;
+
+                        &:first-child {
+                            padding-top: 10px;
+                        }
+
+                        &:last-child {
+                            padding-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@import 'global.scss';
+
+.content-ads-container {
+    margin-bottom: 100px;
+
+    .containt-ads-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        display: flex;
+        gap: 20px;
+
+        .ad-container {
+            transform: translateY(0);
+            border: 1px solid $color-secondary;
+            width: 298px;
+            transform: translateY(0px);
+            transition: all 0.5s;
+            cursor: pointer;
+             
+            img {
+                width: 300px;
+                margin-left: -1px;
+                margin-top: -1px;
+            }
+
+            .ad-text-content {
+                padding: 20px;
+
+            }
+        }
+    }
+}

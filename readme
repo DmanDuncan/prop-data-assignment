@@ -1,0 +1,10 @@
+to start the propdata test site please do the following:
+1 - open a terminal in the propdata-data-test root.
+2 - run the following npm commands in order: 
+    1 - npm run build
+    2 - npm start
+
+to view the bonus question please do the following:
+1 - open a terminal in the bonus-question root.
+2 - run: "live-server" if node is installed or any other alternative.
+3 the results will display in the console of the opened web page.
